@@ -24,7 +24,7 @@ body {
 
 .panel {
   flex: 1;
-  font-size: 3rem;
+  font-size: clamp(0.2rem, 0.2727rem + 0.7273vw, 1rem);
   background: rgb(0, 0, 0) no-repeat top center/cover;
   box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.1);
   display: flex;
@@ -39,18 +39,21 @@ body {
   text-align: center;
   text-shadow: 3px 2px 1px #474747;
   color: white;
+  font-size: 2em;
 }
 
 .panel > * {
-  flex: 1;
+  margin: 0;
+  width: 100%;
+  flex: 1 0 100px;
   display: flex;
+  transition: transform 1s;
+  justify-content: center;
   align-items: center;
-  transition: all 1s;
 }
 
 .panel *:first-child {
   transform: translateY(-100%);
-  font-size: 2rem;
 }
 
 .panel.text-fly-in > *:first-child {
@@ -59,7 +62,10 @@ body {
 
 .panel *:last-child {
   transform: translateY(100%);
-  font-size: 2rem;
+}
+
+.panel *:nth-child(2) {
+  font-size: 4em;
 }
 
 .panel.text-fly-in > *:last-child {
@@ -68,7 +74,6 @@ body {
 
 .panel1 {
   background-image: url('https://source.unsplash.com/1500x1500/?food');
-  transform: scale(1);
 }
 .panel2 {
   background-image: url('https://source.unsplash.com/1500x1500/?landscape');
@@ -85,5 +90,5 @@ body {
 
 .panel-open {
   flex: 5;
-  font-size: 5rem;
+  font-size: 2em;
 }
