@@ -1,5 +1,5 @@
 # photo-gallery
-> Photo gallery displaying random photos
+> Photo gallery displaying random photos using transitions
 
 > Best viewed on tablet or desktop
 
